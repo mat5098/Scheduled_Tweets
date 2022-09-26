@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
 
-  resources :twitter_acount
+  resources :twitter_acounts
 
   root to: "main#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
