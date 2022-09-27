@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-between align-items-center">
+<h1>Tweets</h1>
+<% if Current.user.twitter_acounts.any? %>
+<%= link_to "schedule a Tweets", new_tweet_path, class: "btn btn-primary" %>
+<% end %>
+</div>
+
+
+<% if Current.user.twitter_acounts.none? %>
+<%= link_to "Connect your Twitter account", "/auth/twitter", clas: "btn btn-primary"  %>
+    
+<% end %>
+
+
+<%= render @tweets %>
